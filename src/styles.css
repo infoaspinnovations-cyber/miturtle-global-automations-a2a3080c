@@ -182,3 +182,17 @@
   0%, 100% { box-shadow: 0 0 30px -10px oklch(0.55 0.14 155 / 40%); }
   50% { box-shadow: 0 0 60px -5px oklch(0.55 0.14 155 / 70%); }
 }
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-scroll 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+.marquee-fade-left {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
