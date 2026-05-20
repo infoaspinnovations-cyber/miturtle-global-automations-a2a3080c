@@ -63,12 +63,12 @@ function Home() {
                 style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.88 0.02 240) 100%)" }}>
                 <img src={variants[3].image} alt={variants[3].name} className="absolute inset-0 h-full w-full object-contain p-6" />
               </div>
-              <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-end justify-between gap-4">
-                <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-glow">Flagship</div>
-                  <div className="font-display text-2xl font-bold rounded-md bg-background/70 px-3 py-1 backdrop-blur">{variants[3].model} · {variants[3].name}</div>
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 flex flex-wrap items-end justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-[0.6rem] sm:text-xs font-semibold uppercase tracking-[0.25em] text-emerald-glow">Flagship</div>
+                  <div className="font-display text-sm sm:text-xl md:text-2xl font-bold rounded-md bg-background/70 px-2 py-1 sm:px-3 backdrop-blur">{variants[3].model} · {variants[3].name}</div>
                 </div>
-                <Link to="/products/$slug" params={{ slug: variants[3].slug }} className="btn-ghost !py-2 !px-4 text-xs">View specs <ArrowRight className="size-3.5" /></Link>
+                <Link to="/products/$slug" params={{ slug: variants[3].slug }} className="btn-ghost !py-2 !px-3 sm:!px-4 text-[0.65rem] sm:text-xs">View specs <ArrowRight className="size-3.5" /></Link>
               </div>
             </div>
           </div>
