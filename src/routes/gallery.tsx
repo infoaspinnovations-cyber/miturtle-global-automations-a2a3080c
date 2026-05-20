@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
+import { TrustedBy } from "@/components/site/TrustedBy";
 import { products } from "@/lib/products";
 import parking from "@/assets/gallery-parking.jpg";
 import toll from "@/assets/gallery-toll.jpg";
@@ -21,17 +22,18 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function Gallery() {
-  const items = [
-    { src: products[3].image, label: "Flagship Barrier · MT-DCMTHS/240", span: "md:col-span-2 md:row-span-2" },
+  const byModel = (m: string) => products.find((p) => p.model === m)!;
+  const items: { src: string; label: string; span?: string; contain?: boolean }[] = [
+    { src: byModel("MT-DCMTHS/240").image, label: "Flagship Barrier · MT-DCMTHS/240", span: "md:col-span-2 md:row-span-2", contain: true },
     { src: parking, label: "Smart Parking Automation" },
-    { src: products[0].image, label: "MT-DCMT/120" },
+    { src: byModel("MT-DCMT/120").image, label: "MT-DCMT/120 · Compact DC Barrier", contain: true },
     { src: toll, label: "Highway Toll Plaza", span: "md:col-span-2" },
-    { src: products[1].image, label: "MT-DCGL/150" },
-    { src: products[2].image, label: "MT-DCMT/200" },
+    { src: byModel("MT-DCGL/150").image, label: "MT-DCGL/150 · Gate-Lane Barrier", contain: true },
+    { src: byModel("MT-DCMT/200").image, label: "MT-DCMT/200 · High-Speed Barrier", contain: true },
     { src: control, label: "Smart Access Management" },
-    { src: products[4].image, label: "Sliding Gate Motor" },
+    { src: byModel("MT-SGM").image, label: "Sliding Gate Motor", contain: true },
+    { src: byModel("MT-BLD").image, label: "Automatic Rising Bollard", contain: true },
     { src: install, label: "On-site Installation" },
-    { src: products[5].image, label: "Access Control" },
   ];
 
   return (
@@ -42,7 +44,7 @@ function Gallery() {
         description="Selected product renders and project deployments — from corporate campuses to highway toll plazas."
       />
 
-      <section className="pb-20">
+      <section className="pb-10">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid auto-rows-[18rem] grid-cols-1 gap-4 md:grid-cols-4">
             {items.map((it, i) => (
@@ -50,7 +52,17 @@ function Gallery() {
                 key={i}
                 className={`group relative overflow-hidden rounded-3xl glass p-1 ${it.span ?? ""}`}
               >
-                <img src={it.src} alt={it.label} loading="lazy" className="h-full w-full rounded-2xl object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div
+                  className="relative h-full w-full overflow-hidden rounded-2xl"
+                  style={it.contain ? { background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.85 0.02 240) 100%)" } : undefined}
+                >
+                  <img
+                    src={it.src}
+                    alt={it.label}
+                    loading="lazy"
+                    className={`h-full w-full transition-transform duration-700 group-hover:scale-105 ${it.contain ? "object-contain p-6" : "object-cover"}`}
+                  />
+                </div>
                 <figcaption className="pointer-events-none absolute inset-x-3 bottom-3 rounded-xl bg-background/70 px-4 py-2 text-xs font-semibold backdrop-blur opacity-0 transition-opacity group-hover:opacity-100">
                   {it.label}
                 </figcaption>
@@ -59,6 +71,8 @@ function Gallery() {
           </div>
         </div>
       </section>
+
+      <TrustedBy />
     </>
   );
 }

@@ -47,9 +47,9 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Reach Us</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-emerald-glow" /> Industrial Park, Smart City</li>
-              <li className="flex items-start gap-3"><Phone className="mt-0.5 size-4 text-emerald-glow" /> +91 00000 00000</li>
-              <li className="flex items-start gap-3"><Mail className="mt-0.5 size-4 text-emerald-glow" /> hello@miturtle.com</li>
+              <li className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-emerald-glow" /> 149 Shamabai Tower, Thakurdwar, Charni Road, Mumbai – 400002</li>
+              <li className="flex items-start gap-3"><Phone className="mt-0.5 size-4 shrink-0 text-emerald-glow" /> +91 63948 61699</li>
+              <li className="flex items-start gap-3"><Mail className="mt-0.5 size-4 shrink-0 text-emerald-glow" /> hello@miturtle.com</li>
             </ul>
           </div>
         </div>

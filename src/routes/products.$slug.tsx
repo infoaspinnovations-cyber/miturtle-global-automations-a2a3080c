@@ -48,7 +48,10 @@ function ProductDetail() {
 
           <div className="mt-8 grid gap-12 md:grid-cols-2 md:items-center">
             <div className="relative overflow-hidden rounded-3xl glass-strong p-2">
-              <img src={product.image} alt={product.name} className="aspect-square w-full rounded-2xl object-cover" />
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl"
+                style={{ background: "radial-gradient(ellipse at center, oklch(0.97 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
+                <img src={product.image} alt={product.name} className="absolute inset-0 h-full w-full object-contain p-8" />
+              </div>
             </div>
             <div className="reveal">
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">
