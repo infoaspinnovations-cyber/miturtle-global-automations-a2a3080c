@@ -198,9 +198,9 @@ function Home() {
               { k: "10M+", v: "Cycle MCBF" },
               { k: "99.98%", v: "Uptime SLA" },
             ].map((s) => (
-              <div key={s.v} className="bg-card/40 p-6 md:p-10 text-center backdrop-blur">
-                <div className="font-display text-4xl font-bold text-gradient-emerald md:text-5xl">{s.k}</div>
-                <div className="mt-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">{s.v}</div>
+              <div key={s.v} className="bg-card/40 p-5 sm:p-6 md:p-10 text-center backdrop-blur">
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-emerald break-words">{s.k}</div>
+                <div className="mt-2 text-[0.6rem] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-muted-foreground">{s.v}</div>
               </div>
             ))}
           </div>
