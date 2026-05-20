@@ -28,8 +28,8 @@ const rowB = brands.slice(10);
 
 function LogoCard({ name }: { name: string }) {
   return (
-    <div className="group mx-3 flex h-20 w-56 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:border-emerald-glow/40 hover:bg-white/[0.06] hover:shadow-[0_0_40px_-10px_oklch(0.72_0.16_155/0.6)]">
-      <span className="font-display text-xl font-bold tracking-tight text-foreground/70 transition-colors duration-500 group-hover:text-foreground">
+    <div className="group mx-2 sm:mx-3 flex h-16 w-40 sm:h-20 sm:w-56 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-4 sm:px-6 backdrop-blur-md transition-all duration-500 hover:scale-105 hover:border-emerald-glow/40 hover:bg-white/[0.06] hover:shadow-[0_0_40px_-10px_oklch(0.72_0.16_155/0.6)]">
+      <span className="text-center font-display text-base sm:text-xl font-bold tracking-tight text-foreground/70 transition-colors duration-500 group-hover:text-foreground">
         {name}
       </span>
     </div>
