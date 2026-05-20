@@ -31,7 +31,7 @@ function Contact() {
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:gap-8 lg:px-8 lg:grid-cols-[1.2fr_1fr]">
           <form
             onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-            className="rounded-3xl glass-strong p-8 md:p-6 md:p-10"
+            className="rounded-3xl glass-strong p-6 sm:p-8 md:p-10"
           >
             <h2 className="font-display text-2xl font-bold">Send an inquiry</h2>
             <p className="mt-2 text-sm text-muted-foreground">We respond within one business day.</p>
