@@ -45,7 +45,7 @@ export function PageHero({
       <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
       <div className="absolute inset-x-0 top-20 -z-10 mx-auto h-72 max-w-3xl rounded-full blur-3xl"
         style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.25), transparent 70%)" }} />
-      <div className="mx-auto max-w-5xl px-6 text-center reveal">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center reveal">
         <div className="inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">
           <span className="inline-block size-1.5 rounded-full bg-emerald-glow" />
           {eyebrow}

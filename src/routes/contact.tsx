@@ -91,7 +91,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-7xl px-6">
+        <div className="mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-3xl glass-strong p-2">
             <iframe
               title="MiTurtle Head Office — 149 Shamabai Tower, Charni Road, Mumbai"
