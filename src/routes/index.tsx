@@ -25,30 +25,30 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[100svh] overflow-hidden pt-24 md:pt-32">
+      <section className="relative min-h-[92svh] md:min-h-[100svh] overflow-hidden pt-24 md:pt-32 flex items-center">
         <div className="absolute inset-0 -z-20">
-          <img src={heroBg} alt="" className="h-full w-full object-cover opacity-40" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.13 0.025 260 / 0.6) 0%, oklch(0.13 0.025 260 / 0.9) 70%, oklch(0.13 0.025 260) 100%)" }} />
+          <img src={heroBg} alt="" className="h-full w-full object-cover opacity-50 md:opacity-45" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.13 0.025 260 / 0.55) 0%, oklch(0.13 0.025 260 / 0.85) 70%, oklch(0.13 0.025 260) 100%)" }} />
         </div>
-        <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
+        <div className="absolute inset-0 -z-10 grid-bg opacity-30" />
         <div className="absolute left-1/2 top-1/3 -z-10 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full blur-3xl"
-          style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.25), transparent 70%)" }} />
+          style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.22), transparent 70%)" }} />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center reveal">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+          <div className="mx-auto max-w-3xl lg:max-w-4xl text-center reveal">
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">
               <span className="inline-block size-1.5 animate-pulse rounded-full bg-emerald-glow" />
               Innovate · Integrate · Inspire
             </div>
-            <h1 className="mt-7 font-display text-[2.5rem] sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight">
-              The Future of <span className="text-gradient-emerald">Smart Traffic</span><br />
-              Automation, Engineered.
+            <h1 className="mt-6 md:mt-7 font-display text-[2.25rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.08] tracking-tight">
+              The Future of <span className="text-gradient-emerald">Smart Traffic</span><br className="hidden sm:inline" />
+              <span className="sm:hidden"> </span>Automation, Engineered.
             </h1>
-            <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-5 md:mt-6 max-w-xl lg:max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground md:text-[1.05rem]">
               MiTurtle® designs premium boom barriers, sliding gate motors and intelligent
               access systems — built for enterprises that demand precision, speed and reliability.
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-7 md:mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link to="/products" className="btn-primary">Explore Products <ArrowRight className="size-4" /></Link>
               <Link to="/contact" className="btn-ghost">Talk to an Engineer</Link>
             </div>
