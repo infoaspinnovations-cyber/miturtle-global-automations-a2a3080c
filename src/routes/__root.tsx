@@ -49,7 +49,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "format-detection", content: "telephone=no, address=no, email=no" },
+      { name: "theme-color", content: "#0b1020" },
       { title: "MiTurtle® — Smart Traffic & Access Automation" },
       { name: "description", content: "MiTurtle® engineers premium boom barriers, sliding gate motors and access control systems for enterprise-grade smart traffic automation." },
       { property: "og:title", content: "MiTurtle® — Smart Traffic & Access Automation" },
