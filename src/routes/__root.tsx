@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { FloatingContact } from "@/components/site/FloatingContact";
 
 function NotFoundComponent() {
   return (
@@ -95,6 +96,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingContact />
     </QueryClientProvider>
   );
 }
