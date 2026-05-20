@@ -29,9 +29,9 @@ function Products() {
       />
 
       <section className="py-10">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex items-end justify-between">
-            <h2 className="font-display text-3xl font-bold md:text-4xl">Boom Barrier Variants</h2>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Boom Barrier Variants</h2>
             <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">4 variants · 1 standard</div>
           </div>
 
@@ -73,7 +73,7 @@ function Products() {
           </div>
 
           <div className="mt-20 mb-10 flex items-end justify-between">
-            <h2 className="font-display text-3xl font-bold md:text-4xl">Additional Automation</h2>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Additional Automation</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {others.map((p) => (

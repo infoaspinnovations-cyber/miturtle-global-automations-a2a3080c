@@ -45,7 +45,7 @@ function Gallery() {
       />
 
       <section className="pb-10">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid auto-rows-[18rem] grid-cols-1 gap-4 md:grid-cols-4">
             {items.map((it, i) => (
               <figure

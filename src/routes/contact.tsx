@@ -28,10 +28,10 @@ function Contact() {
       />
 
       <section className="pb-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.2fr_1fr]">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:gap-8 lg:px-8 lg:grid-cols-[1.2fr_1fr]">
           <form
             onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-            className="rounded-3xl glass-strong p-8 md:p-10"
+            className="rounded-3xl glass-strong p-8 md:p-6 md:p-10"
           >
             <h2 className="font-display text-2xl font-bold">Send an inquiry</h2>
             <p className="mt-2 text-sm text-muted-foreground">We respond within one business day.</p>
@@ -95,7 +95,7 @@ function Contact() {
           <div className="overflow-hidden rounded-3xl glass-strong p-2">
             <iframe
               title="MiTurtle Head Office — 149 Shamabai Tower, Charni Road, Mumbai"
-              className="aspect-[21/9] w-full rounded-2xl border-0"
+              className="aspect-[16/10] md:aspect-[21/9] w-full rounded-2xl border-0"
               style={{ filter: "invert(0.92) hue-rotate(180deg)" }}
               loading="lazy"
               src="https://www.openstreetmap.org/export/embed.html?bbox=72.8125%2C18.9425%2C72.8275%2C18.9525&layer=mapnik&marker=18.9475%2C72.8200"

@@ -64,7 +64,7 @@ export function TrustedBy() {
         className="pointer-events-none absolute inset-x-0 top-1/2 -z-10 mx-auto h-80 max-w-4xl -translate-y-1/2 blur-3xl"
         style={{ background: "radial-gradient(ellipse, oklch(0.42 0.11 155 / 0.18), transparent 70%)" }}
       />
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Trusted By"
           title={

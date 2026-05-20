@@ -39,9 +39,9 @@ function ProductDetail() {
 
   return (
     <>
-      <section className="relative pt-36 pb-12">
+      <section className="relative pt-28 md:pt-36 pb-12">
         <div className="absolute inset-0 -z-10 grid-bg opacity-30" />
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link to="/products" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-muted-foreground transition-colors hover:text-foreground">
             <ArrowLeft className="size-3.5" /> All Products
           </Link>
@@ -57,7 +57,7 @@ function ProductDetail() {
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">
                 {product.model}
               </div>
-              <h1 className="mt-5 font-display text-4xl font-bold leading-tight md:text-6xl">{product.name}</h1>
+              <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-6xl font-bold leading-[1.1]">{product.name}</h1>
               <p className="mt-3 text-lg text-emerald-glow">{product.tagline}</p>
               <p className="mt-5 text-muted-foreground">{product.description}</p>
 
@@ -79,9 +79,9 @@ function ProductDetail() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2">
-          <div className="rounded-3xl glass p-10">
+      <section className="py-14 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:gap-10 lg:px-8 md:grid-cols-2">
+          <div className="rounded-3xl glass p-6 md:p-10">
             <div className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">Features</div>
             <h2 className="mt-3 font-display text-3xl font-bold">Smart automation, premium engineering.</h2>
             <ul className="mt-6 space-y-3">
@@ -96,7 +96,7 @@ function ProductDetail() {
             </ul>
           </div>
 
-          <div className="rounded-3xl glass p-10">
+          <div className="rounded-3xl glass p-6 md:p-10">
             <div className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">Applications</div>
             <h2 className="mt-3 font-display text-3xl font-bold">Deployed wherever it matters.</h2>
             <div className="mt-6 grid grid-cols-2 gap-3">
@@ -111,9 +111,9 @@ function ProductDetail() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-display text-3xl font-bold md:text-4xl">Related products</h2>
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Related products</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {related.map((p) => (
               <Link key={p.slug} to="/products/$slug" params={{ slug: p.slug }} className="group rounded-3xl glass p-2 transition-all hover:-translate-y-1">

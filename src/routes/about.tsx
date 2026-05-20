@@ -25,13 +25,13 @@ function About() {
         description="MiTurtle® is a globally trademarked automation brand designing premium boom barriers, gate motors and access systems for enterprises that demand uncompromising reliability."
       />
 
-      <section className="py-16">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
+      <section className="py-12 md:py-16">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:gap-12 lg:px-8 md:grid-cols-2 md:items-center">
           <div className="relative overflow-hidden rounded-3xl glass-strong aspect-[4/3]">
             <div className="absolute inset-0 grid-bg opacity-50" />
             <div className="relative flex h-full items-center justify-center p-12">
               <div className="text-center">
-                <div className="font-display text-7xl font-bold text-gradient-emerald md:text-8xl">MiTurtle<sup className="text-xl text-muted-foreground">®</sup></div>
+                <div className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient-emerald">MiTurtle<sup className="text-xl text-muted-foreground">®</sup></div>
                 <div className="mt-3 text-xs uppercase tracking-[0.35em] text-muted-foreground">Registered Trademark</div>
               </div>
             </div>
@@ -51,10 +51,10 @@ function About() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl glass p-10">
+            <div className="rounded-3xl glass p-6 md:p-10">
               <Target className="size-7 text-emerald-glow" />
               <h3 className="mt-4 font-display text-2xl font-bold">Our Mission</h3>
               <p className="mt-3 text-muted-foreground">
@@ -62,7 +62,7 @@ function About() {
                 industrial — faster, safer and more intelligent.
               </p>
             </div>
-            <div className="rounded-3xl glass p-10">
+            <div className="rounded-3xl glass p-6 md:p-10">
               <Eye className="size-7 text-emerald-glow" />
               <h3 className="mt-4 font-display text-2xl font-bold">Our Vision</h3>
               <p className="mt-3 text-muted-foreground">
@@ -74,8 +74,8 @@ function About() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader eyebrow="Our Approach" title={<>Technology-driven. <span className="text-gradient-emerald">Detail-obsessed.</span></>} center />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {[

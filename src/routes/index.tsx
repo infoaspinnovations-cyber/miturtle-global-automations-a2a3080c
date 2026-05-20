@@ -25,7 +25,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[100svh] overflow-hidden pt-32">
+      <section className="relative min-h-[100svh] overflow-hidden pt-24 md:pt-32">
         <div className="absolute inset-0 -z-20">
           <img src={heroBg} alt="" className="h-full w-full object-cover opacity-40" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.13 0.025 260 / 0.6) 0%, oklch(0.13 0.025 260 / 0.9) 70%, oklch(0.13 0.025 260) 100%)" }} />
@@ -34,13 +34,13 @@ function Home() {
         <div className="absolute left-1/2 top-1/3 -z-10 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full blur-3xl"
           style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.25), transparent 70%)" }} />
 
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center reveal">
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow">
               <span className="inline-block size-1.5 animate-pulse rounded-full bg-emerald-glow" />
               Innovate · Integrate · Inspire
             </div>
-            <h1 className="mt-7 font-display text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl lg:text-[5.5rem]">
+            <h1 className="mt-7 font-display text-[2.5rem] sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight">
               The Future of <span className="text-gradient-emerald">Smart Traffic</span><br />
               Automation, Engineered.
             </h1>
@@ -76,8 +76,8 @@ function Home() {
       </section>
 
       {/* INTRO STRIP */}
-      <section className="relative py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:gap-12 lg:px-8 md:grid-cols-2 md:items-center">
           <SectionHeader
             eyebrow="The MiTurtle Standard"
             title={<>Smart automation, <span className="text-gradient-emerald">made enterprise-grade.</span></>}
@@ -101,8 +101,8 @@ function Home() {
       </section>
 
       {/* PRODUCT SHOWCASE */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Product Showcase"
             title={<>Four boom barriers. <span className="text-gradient-emerald">One uncompromising standard.</span></>}
@@ -138,8 +138,8 @@ function Home() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Why MiTurtle"
             title={<>Built by engineers. <span className="text-gradient-emerald">Trusted by enterprises.</span></>}
@@ -166,8 +166,8 @@ function Home() {
       </section>
 
       {/* APPLICATIONS */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader eyebrow="Industries" title={<>Trusted across <span className="text-gradient-emerald">every sector.</span></>} center />
           <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
             {[
@@ -189,8 +189,8 @@ function Home() {
       <TrustedBy />
 
       {/* STATS */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl glass-strong md:grid-cols-4">
             {[
               { k: "120K+", v: "Lanes Automated" },
@@ -198,7 +198,7 @@ function Home() {
               { k: "10M+", v: "Cycle MCBF" },
               { k: "99.98%", v: "Uptime SLA" },
             ].map((s) => (
-              <div key={s.v} className="bg-card/40 p-10 text-center backdrop-blur">
+              <div key={s.v} className="bg-card/40 p-6 md:p-10 text-center backdrop-blur">
                 <div className="font-display text-4xl font-bold text-gradient-emerald md:text-5xl">{s.k}</div>
                 <div className="mt-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">{s.v}</div>
               </div>
@@ -208,8 +208,8 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader eyebrow="Testimonials" title={<>What enterprise <span className="text-gradient-emerald">clients say.</span></>} center />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {[
@@ -231,15 +231,15 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2rem] p-12 text-center md:p-20"
             style={{ background: "linear-gradient(135deg, oklch(0.18 0.05 260) 0%, oklch(0.22 0.08 200) 100%)" }}>
             <div className="absolute inset-0 grid-bg opacity-30" />
             <div className="absolute -right-20 -top-20 size-80 rounded-full blur-3xl"
               style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.4), transparent 70%)" }} />
             <div className="relative">
-              <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl">
+              <h2 className="mx-auto max-w-3xl font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
                 Ready to engineer your <span className="text-gradient-emerald">smart entry?</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-muted-foreground">

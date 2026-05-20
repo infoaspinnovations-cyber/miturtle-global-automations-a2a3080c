@@ -19,7 +19,7 @@ export function SectionHeader({
           {eyebrow}
         </div>
       )}
-      <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl">
+      <h2 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
         {title}
       </h2>
       {description && (
@@ -41,7 +41,7 @@ export function PageHero({
   description?: ReactNode;
 }) {
   return (
-    <section className="relative pt-40 pb-20">
+    <section className="relative pt-28 md:pt-40 pb-20">
       <div className="absolute inset-0 -z-10 grid-bg opacity-40" />
       <div className="absolute inset-x-0 top-20 -z-10 mx-auto h-72 max-w-3xl rounded-full blur-3xl"
         style={{ background: "radial-gradient(circle, oklch(0.42 0.11 155 / 0.25), transparent 70%)" }} />
@@ -50,7 +50,7 @@ export function PageHero({
           <span className="inline-block size-1.5 rounded-full bg-emerald-glow" />
           {eyebrow}
         </div>
-        <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight md:text-7xl">
+        <h1 className="mt-6 font-display text-[2.25rem] sm:text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
           {title}
         </h1>
         {description && (

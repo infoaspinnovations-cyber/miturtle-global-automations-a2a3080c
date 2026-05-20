@@ -34,8 +34,8 @@ function Services() {
         description="From the first site survey to decade-long support contracts — MiTurtle services are engineered with the same precision as our hardware."
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <div key={s.t} className="group relative overflow-hidden rounded-3xl glass p-8 transition-all hover:-translate-y-1">
@@ -53,8 +53,8 @@ function Services() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Process"
             title={<>How we deliver <span className="text-gradient-emerald">enterprise installs.</span></>}

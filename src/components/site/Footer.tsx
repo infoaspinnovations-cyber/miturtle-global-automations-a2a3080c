@@ -3,9 +3,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-white/5 pt-20 pb-10">
+    <footer className="relative mt-20 md:mt-32 border-t border-white/5 pt-20 pb-10">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-dark/60 to-transparent" />
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5">
