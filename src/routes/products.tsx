@@ -7,7 +7,7 @@ export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
       { title: "Products — MiTurtle® Boom Barriers, Gate Motors & Access Control" },
-      { name: "description", content: "Explore the full MiTurtle® product range: four boom barrier variants, sliding gate motors and intelligent access control systems." },
+      { name: "description", content: `Explore the full MiTurtle® product range: ${products.filter((p) => p.category === "boom").length} boom barrier variants, sliding gate motors and intelligent access control systems.` },
       { property: "og:title", content: "MiTurtle® Products" },
       { property: "og:description", content: "Premium smart-automation hardware for every enterprise lane." },
       { property: "og:url", content: "/products" },
@@ -25,14 +25,14 @@ function Products() {
       <PageHero
         eyebrow="Products"
         title={<>Premium hardware, <span className="text-gradient-emerald">precision engineered.</span></>}
-        description="Four boom barrier variants for every lane, plus sliding gate automation and access control — all engineered to the same uncompromising MiTurtle standard."
+        description={`${boom.length} boom barrier variants for every lane, plus sliding gate automation and access control — all engineered to the same uncompromising MiTurtle standard.`}
       />
 
       <section className="py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex items-end justify-between">
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Boom Barrier Variants</h2>
-            <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">4 variants · 1 standard</div>
+            <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">{boom.length} variants · engineered for every lane</div>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">

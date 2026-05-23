@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/Section";
 import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
+import { products } from "@/lib/products";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -45,12 +46,17 @@ function Contact() {
             <div className="mt-5">
               <label className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Product of interest</label>
               <select className="mt-2 w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm outline-none transition-colors focus:border-emerald-dark">
-                <option>Boom Barrier — MT-DCMT/120</option>
-                <option>Boom Barrier — MT-DCGL/150</option>
-                <option>Boom Barrier — MT-DCMT/200</option>
-                <option>Boom Barrier — MT-DCMTHS/240</option>
-                <option>Sliding Gate Motor</option>
-                <option>Access Control Systems</option>
+                {products.map((product) => {
+                  const label =
+                    product.category === "boom"
+                      ? `Boom Barrier — ${product.model}`
+                      : product.category === "gate"
+                      ? `Sliding Gate Motor — ${product.model}`
+                      : product.category === "access"
+                      ? `Access Control Systems — ${product.model}`
+                      : `Automatic Rising Bollard — ${product.model}`;
+                  return <option key={product.slug}>{label}</option>;
+                })}
                 <option>Other</option>
               </select>
             </div>

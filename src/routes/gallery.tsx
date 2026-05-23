@@ -31,7 +31,7 @@ function Gallery() {
     { src: byModel("MT-DCGL/150").image, label: "MT-DCGL/150 · Gate-Lane Barrier", contain: true },
     { src: byModel("MT-DCMT/200").image, label: "MT-DCMT/200 · High-Speed Barrier", contain: true },
     { src: control, label: "Smart Access Management" },
-    { src: byModel("MT-SGM").image, label: "Sliding Gate Motor", contain: true },
+    { src: byModel("MT-SL600 PRO").image, label: "MT-SL600 PRO · Sliding Gate Motor", contain: true },
     { src: byModel("MT-BLD").image, label: "Automatic Rising Bollard", contain: true },
     { src: install, label: "On-site Installation" },
   ];

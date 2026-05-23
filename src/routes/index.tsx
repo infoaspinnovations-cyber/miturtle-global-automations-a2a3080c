@@ -105,7 +105,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Product Showcase"
-            title={<>Four boom barriers. <span className="text-gradient-emerald">One uncompromising standard.</span></>}
+            title={<>{variants.length} boom barriers. <span className="text-gradient-emerald">One uncompromising standard.</span></>}
             description="A purpose-built variant for every lane — from compact commercial entrances to ultra high-speed highway tolls."
             center
           />
