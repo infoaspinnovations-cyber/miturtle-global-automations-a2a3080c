@@ -39,12 +39,11 @@ export function Navbar() {
         style={{ width: "calc(100% - 1rem)", maxWidth: "calc(100% - 1rem)" }}
       >
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl"
-            style={{ background: "var(--gradient-emerald)" }}>
-            <span className="text-base font-black text-primary-foreground">M</span>
-            <span className="absolute -inset-1 rounded-xl opacity-40 blur-md transition-opacity group-hover:opacity-70"
-              style={{ background: "var(--gradient-emerald)" }} />
-          </span>
+          <img
+            src="https://ik.imagekit.io/f1iw3r6um/WhatsApp%20Image%202026-05-20%20at%2011.01.07%20PM.jpeg"
+            alt="MiTurtle logo"
+            className="h-9 w-9 rounded-xl object-cover"
+          />
           <div className="leading-none">
             <div className="font-display text-lg font-bold tracking-tight">MiTurtle<sup className="ml-0.5 text-[0.55rem] text-muted-foreground">®</sup></div>
             <div className="text-[0.6rem] uppercase tracking-[0.25em] text-muted-foreground">Smart Automation</div>
