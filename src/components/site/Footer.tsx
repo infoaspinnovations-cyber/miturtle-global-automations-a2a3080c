@@ -9,11 +9,16 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl text-primary-foreground"
-                style={{ background: "var(--gradient-emerald)" }}>
-                <span className="text-base font-black">M</span>
+              <span className="inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/10">
+                <img
+                  src="https://ik.imagekit.io/f1iw3r6um/logo.jpeg"
+                  alt="Mi Turtle Global Automations logo"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </span>
-              <span className="font-display text-xl font-bold">MiTurtle<sup className="text-[0.55rem] text-muted-foreground">®</sup></span>
+              <span className="font-display text-xl font-bold">MiTurtle<sup className="text-[0.55rem] text-muted-foreground">®</sup> <span className="text-sm font-medium text-muted-foreground">Global Automations</span></span>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
               MiTurtle® engineers the next generation of smart traffic and access automation —
