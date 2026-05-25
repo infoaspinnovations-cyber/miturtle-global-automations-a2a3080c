@@ -47,7 +47,7 @@ export const products: Product[] = [
     image: "https://ik.imagekit.io/f1iw3r6um/image00001.jpg",
     specs: [
       { label: "Opening Time", value: "1.7 sec" },
-      { label: "Boom Length", value: "Up to 3.2 m" },
+      { label: "Boom Length", value: "Up to 6 m" },
       { label: "Motor", value: "24V DC High-Efficiency" },
       { label: "Duty Cycle", value: "Continuous" },
     ],
@@ -71,7 +71,7 @@ export const products: Product[] = [
     image: "https://ik.imagekit.io/f1iw3r6um/image00008.jpg",
     specs: [
       { label: "Opening Time", value: "1.1 sec" },
-      { label: "Boom Length", value: "Up to 3.8 m" },
+      { label: "Boom Length", value: "Up to 6 m" },
       { label: "Motor", value: "Brushless DC Servo" },
       { label: "MCBF", value: "9M cycles" },
     ],
@@ -95,7 +95,7 @@ export const products: Product[] = [
     image: "https://ik.imagekit.io/f1iw3r6um/image00006.jpg",
     specs: [
       { label: "Opening Time", value: "2.3 sec" },
-      { label: "Boom Length", value: "Up to 4.8 m" },
+      { label: "Boom Length", value: "Up to 6 m" },
       { label: "Motor", value: "24V DC High-Torque" },
       { label: "IP Rating", value: "IP55" },
     ],
@@ -119,7 +119,7 @@ export const products: Product[] = [
     image: "https://ik.imagekit.io/f1iw3r6um/image00005.jpg",
     specs: [
       { label: "Opening Time", value: "1.9 sec" },
-      { label: "Boom Length", value: "Up to 4 m" },
+      { label: "Boom Length", value: "Up to 6 m" },
       { label: "Motor", value: "DC Eco Drive" },
       { label: "Power", value: "Low consumption" },
     ],
