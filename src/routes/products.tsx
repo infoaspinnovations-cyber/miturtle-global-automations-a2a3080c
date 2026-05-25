@@ -35,26 +35,23 @@ function Products() {
             <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">{boom.length} variants · engineered for every lane</div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {boom.map((p) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
                 params={{ slug: p.slug }}
-                className="group relative overflow-hidden rounded-3xl glass p-2 transition-all hover:-translate-y-1"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl glass p-2 transition-all md:hover:-translate-y-1"
               >
-                <div className="relative overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden"
-                    style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
-                    <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/80 to-transparent" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-background/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow backdrop-blur">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
+                  style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
+                  <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-4 sm:p-6 transition-transform duration-700 md:group-hover:scale-[1.04]" />
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-emerald-glow">
                     {p.model}
                   </div>
-                </div>
-                <div className="p-6">
-                  <div className="font-display text-2xl font-bold">{p.name}</div>
+                  <div className="mt-3 font-display text-xl sm:text-2xl font-bold leading-tight break-words">{p.name}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
                   <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/5 pt-5">
                     {p.specs.slice(0, 4).map((s) => (
@@ -64,8 +61,8 @@ function Products() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
-                    View product <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
+                    View product <ArrowRight className="size-4 transition-transform md:group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
@@ -76,29 +73,26 @@ function Products() {
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Sliding Gate Motors</h2>
             <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">{others.length} models · smooth · silent · heavy-duty</div>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {others.map((p) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
                 params={{ slug: p.slug }}
-                className="group relative overflow-hidden rounded-3xl glass p-2 transition-all hover:-translate-y-1"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl glass p-2 transition-all md:hover:-translate-y-1"
               >
-                <div className="relative overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden"
-                    style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
-                    <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/80 to-transparent" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-background/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow backdrop-blur">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
+                  style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
+                  <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-4 sm:p-6 transition-transform duration-700 md:group-hover:scale-[1.04]" />
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-dark/40 bg-emerald-dark/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-emerald-glow">
                     {p.model}
                   </div>
-                </div>
-                <div className="p-6">
-                  <div className="font-display text-2xl font-bold">{p.name}</div>
+                  <div className="mt-3 font-display text-xl sm:text-2xl font-bold leading-tight break-words">{p.name}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
-                    View product <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
+                    View product <ArrowRight className="size-4 transition-transform md:group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
@@ -109,3 +103,5 @@ function Products() {
     </>
   );
 }
+
+
