@@ -98,4 +98,10 @@ function Products() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
 
