@@ -52,9 +52,10 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Reach Us</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>149 Shamabai Tower, Thakurdwar, Charni Road, Mumbai – 400002</span></li>
-              <li className="flex items-start gap-3"><Phone className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><a href="tel:+916394861699" className="hover:text-foreground transition-colors">+91 63948 61699</a></li>
-              <li className="flex items-start gap-3"><Mail className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>hello@miturtle.com</span></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>149 Shamabai Tower, Thakurdwar, Charni Road, Mumbai – 400002</span></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><Phone className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><a href="tel:+916394861699" className="hover:text-foreground transition-colors">+91 63948 61699</a></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><Mail className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>hello@miturtle.com</span></li>
+
             </ul>
           </div>
         </div>
