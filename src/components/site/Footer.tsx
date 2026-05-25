@@ -8,19 +8,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 text-center md:text-left md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="inline-flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/5">
-                <img
-                  src="https://ik.imagekit.io/f1iw3r6um/logo.jpeg"
-                  alt="Mi Turtle Global Automations"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </span>
-            </div>
-            <p className="mt-5 mx-auto md:mx-0 max-w-md text-sm leading-relaxed text-muted-foreground">
-
+            <img
+              src="https://ik.imagekit.io/f1iw3r6um/logo.jpeg"
+              alt="Mi Turtle Global Automations"
+              className="mx-auto md:mx-0 h-auto max-w-[180px] object-contain md:max-w-[220px]"
+              loading="lazy"
+              decoding="async"
+            />
+            <p className="mt-6 mx-auto md:mx-0 max-w-md text-sm leading-relaxed text-muted-foreground">
               MiTurtle® engineers the next generation of smart traffic and access automation —
               precision boom barriers, sliding gate motors, and intelligent control systems
               built for enterprise-grade reliability.
