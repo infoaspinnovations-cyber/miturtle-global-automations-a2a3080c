@@ -6,13 +6,16 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Products — MiTurtle® Boom Barriers, Gate Motors & Access Control" },
-      { name: "description", content: `Explore the full MiTurtle® product range: ${products.filter((p) => p.category === "boom").length} boom barrier variants, sliding gate motors and intelligent access control systems.` },
-      { property: "og:title", content: "MiTurtle® Products" },
-      { property: "og:description", content: "Premium smart-automation hardware for every enterprise lane." },
-      { property: "og:url", content: "/products" },
+      {
+        title:
+          "Products — MiTurtle® Boom Barriers, Gate Motors & Access Control",
+      },
+      {
+        name: "description",
+        content:
+          "Explore premium MiTurtle® smart automation products engineered for modern enterprises.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/products" }],
   }),
   component: Products,
 });
@@ -20,85 +23,180 @@ export const Route = createFileRoute("/products")({
 function Products() {
   const boom = products.filter((p) => p.category === "boom");
   const others = products.filter((p) => p.category !== "boom");
+
   return (
     <>
       <PageHero
         eyebrow="Products"
-        title={<>Premium hardware, <span className="text-gradient-emerald">precision engineered.</span></>}
-        description={`${boom.length} boom barrier variants for every lane, plus sliding gate automation and access control — all engineered to the same uncompromising MiTurtle standard.`}
+        title={
+          <>
+            Premium Hardware,
+            <span className="text-emerald-400">
+              {" "}
+              Precision Engineered
+            </span>
+          </>
+        }
+        description={`${boom.length} boom barrier variants plus intelligent automation systems built for enterprise-grade reliability.`}
       />
 
+      {/* BOOM BARRIERS */}
       <section className="py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex items-end justify-between">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Boom Barrier Variants</h2>
-            <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">{boom.length} variants · engineered for every lane</div>
+
+          {/* Heading */}
+          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              Boom Barrier Variants
+            </h2>
+
+            <div className="hidden md:block text-xs uppercase tracking-widest text-muted-foreground">
+              {boom.length} Variants · Engineered for Every Lane
+            </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          {/* Grid */}
+          <div className="grid gap-6 sm:grid-cols-2">
+
             {boom.map((p) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
                 params={{ slug: p.slug }}
-                className="group relative overflow-hidden rounded-3xl glass p-2 transition-all hover:-translate-y-1"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/5 backdrop-blur-md p-2 transition-all md:hover:-translate-y-1"
               >
+
+                {/* Product Image */}
                 <div className="relative overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden"
-                    style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
-                    <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/80 to-transparent" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-background/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow backdrop-blur">
-                    {p.model}
+
+                  <div
+                    className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
+                    style={{
+                      background:
+                        "radial-gradient(circle at center, #f8fafc 0%, #dbe4ee 100%)",
+                    }}
+                  >
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain p-4 sm:p-6 transition-transform duration-700 md:group-hover:scale-105"
+                    />
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="font-display text-2xl font-bold">{p.name}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
-                  <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/5 pt-5">
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+
+                  {/* Model */}
+                  <div className="inline-flex w-fit items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-400">
+                    {p.model}
+                  </div>
+
+                  {/* Name */}
+                  <div className="mt-3 text-xl sm:text-2xl font-bold leading-tight break-words">
+                    {p.name}
+                  </div>
+
+                  {/* Tagline */}
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {p.tagline}
+                  </p>
+
+                  {/* Specs */}
+                  <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-5">
+
                     {p.specs.slice(0, 4).map((s) => (
                       <div key={s.label}>
-                        <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">{s.label}</div>
-                        <div className="mt-0.5 text-sm font-semibold">{s.value}</div>
+
+                        <div className="text-[10px] uppercase tracking-wide text-muted-foreground">
+                          {s.label}
+                        </div>
+
+                        <div className="mt-1 text-sm font-semibold">
+                          {s.value}
+                        </div>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
-                    View product <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+
+                  {/* Button */}
+                  <div className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400">
+                    View Product
+
+                    <ArrowRight className="size-4 transition-transform md:group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
             ))}
           </div>
 
-          <div className="mt-20 mb-10 flex items-end justify-between">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">Sliding Gate Motors</h2>
-            <div className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground md:block">{others.length} models · smooth · silent · heavy-duty</div>
+          {/* SLIDING GATE */}
+          <div className="mt-20 mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              Sliding Gate Motors
+            </h2>
+
+            <div className="hidden md:block text-xs uppercase tracking-widest text-muted-foreground">
+              {others.length} Models · Smooth · Silent · Heavy-Duty
+            </div>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+
+          {/* Grid */}
+          <div className="grid gap-6 sm:grid-cols-2">
+
             {others.map((p) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
                 params={{ slug: p.slug }}
-                className="group relative overflow-hidden rounded-3xl glass p-2 transition-all hover:-translate-y-1"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/5 backdrop-blur-md p-2 transition-all md:hover:-translate-y-1"
               >
+
+                {/* Product Image */}
                 <div className="relative overflow-hidden rounded-2xl">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden"
-                    style={{ background: "radial-gradient(ellipse at center, oklch(0.96 0.01 240) 0%, oklch(0.86 0.02 240) 100%)" }}>
-                    <img src={p.image} alt={p.name} loading="lazy" className="absolute inset-0 h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.04]" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/80 to-transparent" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-emerald-dark/40 bg-background/70 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-emerald-glow backdrop-blur">
-                    {p.model}
+
+                  <div
+                    className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
+                    style={{
+                      background:
+                        "radial-gradient(circle at center, #f8fafc 0%, #dbe4ee 100%)",
+                    }}
+                  >
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain p-4 sm:p-6 transition-transform duration-700 md:group-hover:scale-105"
+                    />
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="font-display text-2xl font-bold">{p.name}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-glow">
-                    View product <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+
+                  {/* Model */}
+                  <div className="inline-flex w-fit items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-400">
+                    {p.model}
+                  </div>
+
+                  {/* Name */}
+                  <div className="mt-3 text-xl sm:text-2xl font-bold leading-tight break-words">
+                    {p.name}
+                  </div>
+
+                  {/* Tagline */}
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {p.tagline}
+                  </p>
+
+                  {/* Button */}
+                  <div className="mt-auto pt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400">
+                    View Product
+
+                    <ArrowRight className="size-4 transition-transform md:group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
