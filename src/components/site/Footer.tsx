@@ -6,21 +6,16 @@ export function Footer() {
     <footer className="relative mt-20 md:mt-32 border-t border-white/5 pt-20 pb-10">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-dark/60 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 text-center md:text-left md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <span className="inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/10">
-                <img
-                  src="https://ik.imagekit.io/f1iw3r6um/logo.jpeg"
-                  alt="Mi Turtle Global Automations logo"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </span>
-              <span className="font-display text-xl font-bold">MiTurtle<sup className="text-[0.55rem] text-muted-foreground">®</sup> <span className="text-sm font-medium text-muted-foreground">Global Automations</span></span>
-            </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
+            <img
+              src="https://ik.imagekit.io/f1iw3r6um/logo.jpeg"
+              alt="Mi Turtle Global Automations"
+              className="mx-auto md:mx-0 h-auto max-w-[180px] object-contain md:max-w-[220px]"
+              loading="lazy"
+              decoding="async"
+            />
+            <p className="mt-6 mx-auto md:mx-0 max-w-md text-sm leading-relaxed text-muted-foreground">
               MiTurtle® engineers the next generation of smart traffic and access automation —
               precision boom barriers, sliding gate motors, and intelligent control systems
               built for enterprise-grade reliability.
@@ -52,9 +47,10 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Reach Us</h4>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>149 Shamabai Tower, Thakurdwar, Charni Road, Mumbai – 400002</span></li>
-              <li className="flex items-start gap-3"><Phone className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><a href="tel:+916394861699" className="hover:text-foreground transition-colors">+91 63948 61699</a></li>
-              <li className="flex items-start gap-3"><Mail className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>hello@miturtle.com</span></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><MapPin className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>149 Shamabai Tower, Thakurdwar, Charni Road, Mumbai – 400002</span></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><Phone className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><a href="tel:+916394861699" className="hover:text-foreground transition-colors">+91 63948 61699</a></li>
+              <li className="flex items-start justify-center md:justify-start gap-3"><Mail className="mt-0.5 size-4 shrink-0 text-emerald-glow" /><span>hello@miturtle.com</span></li>
+
             </ul>
           </div>
         </div>
