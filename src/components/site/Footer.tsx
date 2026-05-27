@@ -90,10 +90,10 @@ export function Footer() {
                 <Mail className="size-4 shrink-0 text-emerald-glow" />
 
                 <a
-                  href="mailto:hello@miturtle.com"
+                  href="mailto:sales@miturtle.com"
                   className="transition-colors hover:text-white"
                 >
-                  hello@miturtle.com
+                  sales@miturtle.com
                 </a>
               </li>
             </ul>
