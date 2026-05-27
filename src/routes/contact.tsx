@@ -71,7 +71,7 @@ function Contact() {
             <a href="tel:+916394861699" className="block">
               <InfoCard icon={Phone} title="Phone" lines={["+91 63948 61699", "Mon–Sat · 9am – 7pm"]} />
             </a>
-            <InfoCard icon={Mail} title="Email" lines={["hello@miturtle.com", "support@miturtle.com"]} />
+            <InfoCard icon={Mail} title="Email" lines={["sales@miturtle.com", "support@miturtle.com"]} />
             <a
               href="https://wa.me/916394861699"
               target="_blank"
